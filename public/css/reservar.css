@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background-color: #ffb800;
+    padding: 15px 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.header a{
+    float: left;
+    
+}
+
+.chevron-left{
+    width: 30px;
+
+}
+
+.header.title{
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    text-align: center;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+}
+
+.main-title{
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 21px;
+}
+
+input{
+    background-color: #FAFAFA;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.reservar-button{
+    border: none;
+    background-color: #ffb800;
+    padding: 10px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.form-group p{
+    margin-top: -20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}

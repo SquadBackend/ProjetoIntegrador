@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+html{
+    display: flex;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+.titulo{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.chevron-left{
+    width: 30px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.text1{
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-left: 450px;
+    font-size: 25px;
+}
+.borda{
+    width: 30px;
+    height: 30px;
+}
+#id1{
+    background: url(borda.png) no-repeat;
+    position: absolute;
+
+}
+.borda img.bd{
+    width: 139px;
+}
+.l img{
+    width: 500px;
+    right: 0px;
+    float: right;
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+.main{
+    display: flex !important;
+}
+img.perfil{
+    width: 63px;
+}
+
+p.al{
+    font-size: 19px;
+    font-weight: bold;
+    height: 30px;
+}
+p.rr{
+
+}
+p.tp{
+    font-size: 19px;
+}
+
+img.seta{
+    margin-top: 5.5px;
+    margin-left: 10px;
+    width: 13px;
+    height: 10px;
+}
+
+.table{
+    display: flex;
+}
+
+.pt p{
+    font-size: 9px;
+}
+.pt img{
+    height: 5px;
+
+}
+
+.gg{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+th, td {
+    padding: 5px 100px 5px 100px;
+  }
+.desc{
+    text-align: center;
+}
+.pt{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

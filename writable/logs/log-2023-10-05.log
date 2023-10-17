@@ -1,0 +1,504 @@
+ERROR - 2023-10-05 21:16:48 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 21:16:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 21:22:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 21:22:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 21:23:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 21:23:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 21:26:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 21:26:35 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 21:27:48 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 21:27:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 21:47:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 21:47:57 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 21:48:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 21:48:11 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(20): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 21:52:24 --> syntax error, unexpected variable "$email"
+in APPPATH/Controllers/AuthLogin.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 21:54:12 --> syntax error, unexpected variable "$email"
+in APPPATH/Controllers/AuthLogin.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 21:54:52 --> syntax error, unexpected variable "$email"
+in APPPATH/Controllers/AuthLogin.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 21:54:53 --> syntax error, unexpected variable "$email"
+in APPPATH/Controllers/AuthLogin.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 21:54:54 --> syntax error, unexpected variable "$email"
+in APPPATH/Controllers/AuthLogin.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 21:56:07 --> syntax error, unexpected variable "$email"
+in APPPATH/Controllers/AuthLogin.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 21:56:11 --> syntax error, unexpected variable "$email"
+in APPPATH/Controllers/AuthLogin.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 22:00:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(21): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(21): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 22:00:27 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(21): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+ERROR - 2023-10-05 22:01:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'SB'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(21): CodeIgniter\BaseModel->first()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/xnullx/ProjetoIntegradorBackEnd/app/Controllers/AuthLogin.php(21): CodeIgniter\BaseModel->first()
+#6 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+#7 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+#8 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/xnullx/ProjetoIntegradorBackEnd/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/xnullx/ProjetoIntegradorBackEnd/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-10-05 22:01:27 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthLogin.php(21): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 7 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+CRITICAL - 2023-10-05 22:18:07 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH/Controllers/AuthLogin.php on line 29.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(873): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+INFO - 2023-10-05 22:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 22:18:42 --> Call to undefined method CodeIgniter\HTTP\RedirectResponse::wtihInput()
+in APPPATH/Controllers/AuthLogin.php on line 28.
+ 1 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 2 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+INFO - 2023-10-05 22:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 22:19:15 --> Call to undefined method CodeIgniter\HTTP\RedirectResponse::wtihInput()
+in APPPATH/Controllers/AuthLogin.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 2 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+INFO - 2023-10-05 22:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 22:19:42 --> Call to undefined method CodeIgniter\HTTP\RedirectResponse::wtihInput()
+in APPPATH/Controllers/AuthLogin.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthLogin->login()
+ 2 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
+INFO - 2023-10-05 22:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 22:43:13 --> App\Controllers\AuthCadastro::cadastro(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH/Controllers/AuthCadastro.php on line 26.
+ 1 SYSTEMPATH/CodeIgniter.php(915): App\Controllers\AuthCadastro->cadastro()
+ 2 SYSTEMPATH/CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/xnullx/ProjetoIntegradorBackEnd/public/index.php')
