@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Models\ReservaModel;
+use App\Models\CardapioModel;
 
 
 class CantinaController extends BaseController
@@ -16,7 +17,11 @@ class CantinaController extends BaseController
 
     public function cardapio()
     {
+        $cardapioModel = new CardapioModel();
 
+        $data['comidas'] = $cardapioModel->findAll();
+
+        return view('cantina/menu', $data);
     }
 
     public function cadastros()

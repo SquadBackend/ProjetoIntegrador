@@ -18,7 +18,11 @@ body{
     font-size: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+center {
+    padding-right: calc(50% - 100px);
 }
 
 img{
@@ -28,7 +32,7 @@ img{
 
 .chevron-left{
     width: 50px;
-
+    float: left;
 }
 
 
@@ -52,6 +56,13 @@ th {
 
 td {
     padding: 10px 0px;
+}
+
+.buttonDelete{
+    padding: 5px 10px;
+    background-color: #ffb800;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 

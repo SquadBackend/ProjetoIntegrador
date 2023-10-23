@@ -53,7 +53,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    margin: 0 auto;
+
 }
 
 label {
@@ -71,20 +71,55 @@ input{
 .reservar-button{
     border: none;
     background-color: #ffb800;
-    padding: 10px;
+    padding: 10px 0px;
     font-size: 18px;
     position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
     cursor: pointer;
     user-select: none;
+    text-align: center;
+    margin-bottom: -20px;
 }
 
-.form-group p{
-    margin-top: -20px;
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
+
+.message {
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin: 20px;
+}
+
+.message p{
+    font-weight: bold;
+}
+
+.message.sucesso{
+    background-color: #c1ffaf;
+}
+
+.message.sucesso p{
+    color: #2f8200;
+}
+
+.message.erro{
+    background-color: #ffd6d6;
+}
+
+.message.erro p{
+    color: #ff2727;
+}
+
 
 form {
     display: flex;
     flex-direction: column;
+     margin: 0 auto;
 }

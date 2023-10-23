@@ -19,15 +19,15 @@ class AuthLogin extends BaseController
         $usuario = $userModel->where('Email', $email)->first();
 
         if(is_null($usuario)){
-            #return redirect()->back()->withInput()->with('erro', 'Dados invalidos.');
-            return redirect()->to(base_url());
+            session()->setFlashdata('erro', 'Usuário ou senha incorretos');
+            return redirect()->to(site_url('','http'));
         }
 
         $authVerify = password_verify($senha, $usuario['Senha']);
 
         if(!$authVerify){
-            #return redirect()->back()->withInput()->with('erro', 'Dados invalidos.');
-            return redirect()->to(base_url());
+            session()->setFlashdata('erro', 'Usuário ou senha incorretos');
+            return redirect()->to(site_url('','http'));
         }
 
         $ses_data = [
@@ -41,14 +41,14 @@ class AuthLogin extends BaseController
         $session->set($ses_data);
 
         if($usuario['Tipo_usuario'] == 0){
-            return redirect()->to(base_url() . 'aluno/inicio/');
+            return redirect()->to(site_url('aluno/inicio','http'));
         }
-        return redirect()->to(base_url() . 'cantina/inicio');
+        return redirect()->to(site_url('cantina/inicio','http'));
 
     }
 
     public function logout() {
         session_destroy();
-        return redirect()->to(base_url());
+        return redirect()->to(site_url('','http'));
     }
 }

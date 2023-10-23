@@ -9,6 +9,15 @@ use CodeIgniter\Router\RouteCollection;
 
 use App\Controllers\Pages;
 
+$routes->group("api", function ($routes) {
+    $routes->post('registro', 'Api\registro::index');
+    $routes->post('login', 'Api\login::index');
+    $routes->resource('usuarios', ['controller' => 'Api\usuarios']);
+    $routes->resource('pedidos', ['controller' => 'Api\pedidos']);
+});
+
+
+
 $routes->get('/', 'AuthLogin::index', ['filter' => 'guestFilter']);
 $routes->post('/', 'AuthLogin::login', ['filter' => 'guestFilter']);
 $routes->get('cadastro/', 'AuthCadastro::index', ['filter' => 'guestFilter']);
@@ -22,7 +31,7 @@ $routes->get('aluno/cardapio/', 'AlunoController::cardapio', ['filter' => 'authA
 $routes->get('aluno/historico/', 'AlunoController::historico', ['filter' => 'authAlunoFilter']);
 
 $routes->get('cantina/inicio/', 'CantinaController::index', ['filter' => 'authCantinaFilter']);
-$routes->get('cantina/cardapio/', 'AlunoController::cardapio', ['filter' => 'authCantinaFilter']);
+$routes->get('cantina/cardapio/', 'CantinaController::cardapio', ['filter' => 'authCantinaFilter']);
 $routes->get('cantina/cadastros/', 'CantinaController::cadastros', ['filter' => 'authCantinaFilter']);
 $routes->get('cantina/reservas/', 'CantinaController::reservas', ['filter' => 'authCantinaFilter']);
 $routes->get('cantina/pagamentos/', 'CantinaController::pagamentos', ['filter' => 'authCantinaFilter']);

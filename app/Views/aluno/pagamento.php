@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="header">
-        <a href="<?php echo base_url() . 'aluno/inicio/'; ?>"><img class="chevron-left" src="/chevron-left.svg" alt=""></a>
+        <a href="<?php echo site_url('aluno/inicio','https'); ?>"><img class="chevron-left" src="/img/chevron-left.svg" alt=""></a>
         <span class="header title">PAGAMENTO</span>
     </div>
     <div class="main">

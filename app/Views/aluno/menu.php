@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="acess">
-        <img class="chevron-left" src="/chevron-left.svg" alt="">
+    <a href="<?php echo site_url('aluno/inicio','https'); ?>"><img class="chevron-left" src="/img/chevron-left.svg" alt=""></a>
         <center>Menu</center>
     </div>
     <div class="card">

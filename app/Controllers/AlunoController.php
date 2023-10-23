@@ -31,11 +31,13 @@ class AlunoController extends BaseController
 
         $response = $pedidoModel->insert($data, false);
 
-        if($response){
-            return redirect()->to(base_url() . 'aluno/inicio/');
+        if(!$response){
+            session()->setFlashdata('erro', 'Ocorreu um erro ao efetuar a reserva ( ' . $data['Data'] .  ' )');
+            return redirect()->to(site_url('aluno/reservar','http'));
         }
 
-        return redirect()->to(base_url() . 'aluno/reservar/');
+        session()->setFlashdata('sucesso', 'Reserva ( ' . $data['Data'] . ' ) efetuada com sucesso');
+        return redirect()->to(site_url('aluno/reservar','http'));
     }
 
     public function cardapio()
