@@ -4,6 +4,7 @@ namespace App\Controllers\Api;
 
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
+use App\Models\PedidoModel;
 
 class usuarios extends ResourceController
 {
@@ -55,6 +56,12 @@ class usuarios extends ResourceController
     public function delete($id = null)
     {
         $data = $this->model->find($id);
+        
+        $pedidoModel = new PedidoModel();
+
+        if(!$pedidoModel->deleteAll($id)){
+            return $this->fail("Ocorreu um erro ao deletar os pedidos deste usuário");
+        }
 
         if($data){
             $this->model->delete($id);

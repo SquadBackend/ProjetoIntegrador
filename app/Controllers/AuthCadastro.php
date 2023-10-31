@@ -24,45 +24,45 @@ class AuthCadastro extends BaseController
             'nome' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'O campo nome não pode está vazio',
+                    'required' => 'O campo nome não pode estar vazio.',
                 ],
             ],
             'cpf' => [
                 'rules' => 'required|max_length[11]|is_unique[Usuario.CPF]',
                 'errors' => [
-                    'required' => 'O campo cpf não pode está vazio',
-                    'max_length' => 'O cpf tem no maximo 11 caracteres',
-                    'is_unique' => 'Já tem uma conta usando este CPF',
+                    'required' => 'O campo cpf não pode estar vazio.',
+                    'max_length' => 'O CPF têm 11 caracteres.',
+                    'is_unique' => 'Já existe uma conta associada a este CPF.',
                 ],
             ],
             'matricula' => [
                 'rules' => 'required|max_length[12]|is_unique[Usuario.Matricula]',
                 'errors' => [
-                    'required' => 'O campo matricula não pode está vazio',
-                    'max_length' => 'A matricula tem no maximo 12 caracteres',
-                    'is_unique' => 'Já tem uma conta usando esta matricula',
+                    'required' => 'O campo matricula não pode estar vazio.',
+                    'max_length' => 'A matrícula têm 12 caracteres.',
+                    'is_unique' => 'Já existe uma conta associada a esta matrícula.',
                 ],
             ],
             'email' => [
                 'rules' => 'required|max_length[254]|valid_email',
                 'errors' => [
-                    'required' => 'O campo email não pode está vazio',
-                    'max_length' => 'O E-mail tem no maximo 254 caracteres',
-                    'valid_email' => 'Este não é um e-mail válido',
+                    'required' => 'O campo e-mail não pode estar vazio.',
+                    'max_length' => 'O e-mail deve conter no máximo 254 caracteres.',
+                    'valid_email' => 'O endereço de e-mail fornecido não é válido.',
                 ],
             ],
             'senha' => [
                 'rules' => 'required|max_length[255]',
                 'errors' => [
-                    'required' => 'O campo senha não pode está vazio',
-                    'max_length' => 'O tamanho máximo da senha é de 255 caracteres',
+                    'required' => 'O campo senha não pode estar vazio.',
+                    'max_length' => 'A senha deve ter no máximo 255 caracteres.',
                 ],
             ],
             'senhaconf' => [
                 'rules' => 'required|max_length[255]|matches[senha]',
                 'errors' => [
-                    'required' => 'Você deve confirmar a sua senha',
-                    'matches' => 'As senhas não correspondem',
+                    'required' => 'É necessário confirmar a sua senha.',
+                    'matches' => 'As senhas fornecidas não coincidem.',
                 ],
             ],
         ];

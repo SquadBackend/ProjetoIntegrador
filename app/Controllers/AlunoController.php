@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 use App\Models\UserModel;
 use App\Models\PedidoModel;
 use App\Models\CardapioModel;
-use App\Models\ReservaModel;
 
 class AlunoController extends BaseController
 {
@@ -46,14 +45,14 @@ class AlunoController extends BaseController
 
         $data['comidas'] = $cardapioModel->findAll();
 
-        return view('aluno/menu', $data);
+        return view('aluno/cardapio', $data);
     }
 
     public function historico()
     {
-        $reservaModel = new ReservaModel();
+        $pedidoModel = new PedidoModel();
 
-        $data['reservas'] = $reservaModel->where('Usuario_id', session()->get('id'))->findAll();
+        $data['reservas'] = $pedidoModel->where('Usuario_id', session()->get('id'))->where('Pago', 1)->findAll();
 
         return view('aluno/historico', $data);
     }
@@ -62,8 +61,8 @@ class AlunoController extends BaseController
     {
         $pedidoModel = new PedidoModel();
 
-        $data['pedidos'] = $pedidoModel->where('Usuario_id', session()->get('id'))->findAll();
-        $columnPreco = $pedidoModel->where('Usuario_id', session()->get('id'))->findColumn('Preco');
+        $data['pedidos'] = $pedidoModel->where('Usuario_id', session()->get('id'))->where('Pago', 0)->findAll();
+        $columnPreco = $pedidoModel->where('Usuario_id', session()->get('id'))->where('Pago', 0)->findColumn('Preco');
         if($columnPreco){
                 $data['total'] = number_format(array_sum($columnPreco), 2);
         }else{

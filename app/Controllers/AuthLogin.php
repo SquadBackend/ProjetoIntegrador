@@ -35,15 +35,21 @@ class AuthLogin extends BaseController
             'nome' => $usuario['Nome'],
             'tipo' => $usuario['Tipo_usuario'],
             'email' => $usuario['Email'],
+            'bloqueado' => $usuario['Bloqueado'],
+            'verificado' => $usuario['Verificado'],
             'isLoggedIn' => TRUE
         ];
 
         $session->set($ses_data);
 
         if($usuario['Tipo_usuario'] == 0){
-            return redirect()->to(site_url('aluno/inicio','http'));
+            return redirect()->to(site_url('aluno/','http'));
+        }else if($usuario['Tipo_usuario'] == 1){
+            return redirect()->to(site_url('cantina/','http'));
+        }else if($usuario['Tipo_usuario'] == 2){
+            return redirect()->to(site_url('cae/','http'));
         }
-        return redirect()->to(site_url('cantina/inicio','http'));
+        
 
     }
 

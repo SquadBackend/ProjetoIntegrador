@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\UserModel;
-use App\Models\ReservaModel;
+use App\Models\pedidoModel;
 use App\Models\CardapioModel;
 
 
@@ -21,28 +21,25 @@ class CantinaController extends BaseController
 
         $data['comidas'] = $cardapioModel->findAll();
 
-        return view('cantina/menu', $data);
+        return view('cantina/cardapio', $data);
     }
 
     public function cadastros()
     {
         $userModel = new UserModel();
-        $data['usuarios'] = $userModel->where('Tipo_usuario', 0)->findAll();
+        $data['usuarios'] = $userModel->where('Tipo_usuario', 0)->where('Verificado', 1)->findAll();
 
         return view('cantina/cadastros', $data);
     }
 
     public function reservas()
     {
-        /*$reservasModel = new ReservaModel();
-        $reservas = $reservasModel->findAll();
-        $data['reservas'] = $reservas;
-        $data['total'] = count($reservas);*/
-
         $db = \Config\Database::connect();
-        $builder = $db->table('Reserva');
+        $builder = $db->table('Pedido');
         $builder->select('*');
-        $builder->join('Usuario', 'Usuario.id = Reserva.Usuario_id');
+        $builder->where('Pago', 1);
+        $builder->where('Data', date('Y-m-d'));
+        $builder->join('Usuario', 'Usuario.id = Pedido.Usuario_id');
         $query = $builder->get();
 
         $reservas = $query->getResult();
@@ -50,6 +47,22 @@ class CantinaController extends BaseController
         $data['total'] = count($reservas);
 
         return view('cantina/reservas', $data);
+    }
+
+    public function historico()
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('Pedido');
+        $builder->select('*');
+        $builder->where('Pago', 1);
+        $builder->join('Usuario', 'Usuario.id = Pedido.Usuario_id');
+        $query = $builder->get();
+
+        $reservas = $query->getResult();
+        $data['reservas'] = $reservas;
+        $data['total'] = count($reservas);
+
+        return view('cantina/historico', $data);
     }
 
     public function pagamentos()

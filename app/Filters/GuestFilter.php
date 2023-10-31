@@ -26,10 +26,13 @@ class GuestFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         if(session()->get('isLoggedIn')){
-            if(session()->get('tipo') == 1){
-                return redirect()->to(base_url() . 'cantina/inicio');
+            if(session()->get('tipo') == 0){
+                return redirect()->to(site_url('aluno/', 'http'));
+            }else if(session()->get('tipo') == 1){
+                return redirect()->to(site_url('cantina/', 'http'));
+            }else if(session()->get('tipo') == 2){
+                return redirect()->to(site_url('cae/', 'http'));
             }
-            return redirect()->to(base_url() . 'aluno/inicio/');
         }
     }
 

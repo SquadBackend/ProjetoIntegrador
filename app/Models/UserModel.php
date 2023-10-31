@@ -17,6 +17,8 @@ class UserModel extends Model
         'Email',
         'Senha',
         'Matricula',
+        'Bloqueado',
+        'Verificado'
     ];
 
 }

@@ -60,7 +60,7 @@ label {
     font-size: 21px;
 }
 
-input{
+input, select{
     background-color: #FAFAFA;
     border: none;
     padding: 10px;
@@ -80,7 +80,6 @@ input{
     cursor: pointer;
     user-select: none;
     text-align: center;
-    margin-bottom: -20px;
 }
 
 

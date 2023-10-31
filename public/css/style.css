@@ -75,14 +75,8 @@ body{
     height: 60px;
 }
 
-.coracao {
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    height: 40px;
-    width: 50px;
-    background-color: white;
-    padding: 5px;
+span {
+    padding-right: calc(50% - 38px);
 }
 
 .chevron-left {

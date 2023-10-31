@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <div class="login">LOGIN</div>
@@ -27,7 +27,7 @@
 
         <form action="<?php  echo site_url('', 'http'); ?>" method="post">
             <div class="form-input-label">
-                <p>USUÁRIO:</p>
+                <p>EMAIL:</p>
             </div>
             <input type="text" name="usuario" id="usuario" placeholder="XXXXXXXXX" onkeypress="validarNumero(event)">
 
@@ -37,7 +37,7 @@
             <input type="password" name="senha" id="senha" placeholder="********">
 
             <input type="checkbox" name="lembre" id="lembre"> Lembre-se de mim
-            <button type="submit" class="entrar" onclick="Login(event);">ENTRAR</button>
+            <button type="submit" class="entrar">ENTRAR</button>
             <div class="oth">
                 <p>Esqueceu sua senha?</p>
                 <a href="<?php echo site_url('cadastro', 'http'); ?>">Cadastrar-se</a>

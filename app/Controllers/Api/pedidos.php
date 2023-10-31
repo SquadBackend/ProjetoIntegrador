@@ -31,18 +31,28 @@ class pedidos extends ResourceController
     public function create()
     {
         $data = $this->request->getJSON();
-
-        if($this->model->insert($data)){
-            $response = [
-                'status'   => 201,
-                'error'    => null,
-                'messages' => [
-                    'success' => 'Dados salvos'
-                ]
-            ];
-            return $this->respondCreated($response);
+        $data->Criado_em = date("Y-m-d H:i:s");
+        
+        $dia_da_semana = date('w', strtotime($data->Data));
+        if($dia_da_semana == 0 or $dia_da_semana == 6){
+            return $this->failValidationError('Não é possível fazer reservas para sábados e domingos.');
         }
-        return $this->fail($this->model->errors());
+
+        if(!$this->model->where('Usuario_id', $data->Usuario_id)->where('Data', $data->Data)->findAll()){
+            if($this->model->insert($data)){
+                $response = [
+                    'status'   => 201,
+                    'error'    => null,
+                    'messages' => [
+                        'success' => 'Dados salvos'
+                    ]
+                ];
+                return $this->respondCreated($response);
+            }
+            return $this->fail($this->model->errors());
+        }
+        return $this->failResourceExists('Uma reserva com a mesma data já foi efetuada.');
+        
 
     }
 
@@ -50,18 +60,62 @@ class pedidos extends ResourceController
     {
         $data = $this->request->getJSON();
 
-        if($this->model->update($id, $data)){
-            $response = [
-                'status'   => 200,
-                'error'    => null,
-                'messages' => [
-                    'success' => 'Dados atualizados'
-                    ]
+        if(property_exists($data, "Data")){
+            $dia_da_semana = date('w', strtotime($data->Data));
+            if($dia_da_semana == 0 or $dia_da_semana == 6){
+                return $this->failValidationError('Não é permitido alterar a reserva para um sábado ou domingo.');
+            }
+
+            if(!$this->model->where('Usuario_id', $data->Usuario_id)->where('Data', $data->Data)->findAll()){
+                if($this->model->update($id, $data)){
+                    $response = [
+                        'status'   => 200,
+                        'error'    => null,
+                        'messages' => [
+                            'success' => 'Dados atualizados'
+                            ]
+                    ];
+                    return $this->respond($response);
+                };
+        
+                return $this->fail($this->model->errors());
+            }
+        }else{
+            if($this->model->update($id, $data)){
+                $response = [
+                    'status'   => 200,
+                    'error'    => null,
+                    'messages' => [
+                        'success' => 'Dados atualizados'
+                        ]
                 ];
                 return $this->respond($response);
             };
-
+    
             return $this->fail($this->model->errors());
+        }
+        
+
+        return $this->failResourceExists('Uma reserva com a mesma data já foi efetuada.');
+        
+    }
+
+    public function payAll($userId){
+        if($this->model->where("Usuario_id", $userId)->where('Pago', 0)->findAll()){
+            if($this->model->where("Usuario_id", $userId)->set(['Pago' => 1])->update()){
+                $response = [
+                    'status'   => 200,
+                    'error'    => null,
+                    'messages' => [
+                        'success' => 'Todos os pedidos foram transformados em reservas'
+                        ]
+                    ];
+                    return $this->respond($response);
+            }
+            return $this->fail($this->model->errors());
+        }
+        return $this->respond('Não há pedidos efetuados.', 400);
+        
     }
 
     public function delete($id = null)

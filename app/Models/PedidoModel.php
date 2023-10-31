@@ -12,7 +12,13 @@ class PedidoModel extends Model
         'Usuario_id',
         'Data',
         'Turno',
-        'Preco'
+        'Preco',
+        'Pago',
+        'Criado_em'
     ];
 
+
+    public function deleteAll($id){
+        return $this->where('Usuario_id', $id)->delete();
+    }
 }

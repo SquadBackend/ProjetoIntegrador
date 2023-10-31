@@ -10,31 +10,33 @@ use CodeIgniter\Router\RouteCollection;
 use App\Controllers\Pages;
 
 $routes->group("api", function ($routes) {
-    $routes->post('registro', 'Api\registro::index');
-    $routes->post('login', 'Api\login::index');
-    $routes->resource('usuarios', ['controller' => 'Api\usuarios']);
-    $routes->resource('pedidos', ['controller' => 'Api\pedidos']);
+    $routes->resource('usuarios', ['controller' => 'Api\usuarios', 'filter' => 'authApiFilter', 'websafe' => 1]);
+    $routes->resource('pedidos', ['controller' => 'Api\pedidos', 'filter' => 'authApiFilter', 'websafe' => 1]);
+    $routes->post('payAll/(:num)', 'Api\pedidos::payAll/$1', ['filter' => 'authApiFilter']);
 });
-
-
 
 $routes->get('/', 'AuthLogin::index', ['filter' => 'guestFilter']);
 $routes->post('/', 'AuthLogin::login', ['filter' => 'guestFilter']);
 $routes->get('cadastro/', 'AuthCadastro::index', ['filter' => 'guestFilter']);
 $routes->post('cadastro/', 'AuthCadastro::cadastro', ['filter' => 'guestFilter']);
 
-$routes->get('aluno/inicio/', 'AlunoController::index', ['filter' => 'authAlunoFilter']);
-$routes->get('aluno/reservar/', 'AlunoController::reserva', ['filter' => 'authAlunoFilter']);
-$routes->post('aluno/reservar/', 'AlunoController::reservar', ['filter' => 'authAlunoFilter']);
-$routes->get('aluno/pagamento/', 'AlunoController::pagamento', ['filter' => 'authAlunoFilter']);
-$routes->get('aluno/cardapio/', 'AlunoController::cardapio', ['filter' => 'authAlunoFilter']);
-$routes->get('aluno/historico/', 'AlunoController::historico', ['filter' => 'authAlunoFilter']);
+$routes->get('aluno/', 'AlunoController::index', ['filter' => 'authUserFilter']);
+$routes->get('aluno/reservar/', 'AlunoController::reserva', ['filter' => 'authUserFilter']);
+$routes->post('aluno/reservar/', 'AlunoController::reservar', ['filter' => 'authUserFilter']);
+$routes->get('aluno/pagamento/', 'AlunoController::pagamento', ['filter' => 'authUserFilter']);
+$routes->get('aluno/cardapio/', 'AlunoController::cardapio', ['filter' => 'authUserFilter']);
+$routes->get('aluno/historico/', 'AlunoController::historico', ['filter' => 'authUserFilter']);
 
-$routes->get('cantina/inicio/', 'CantinaController::index', ['filter' => 'authCantinaFilter']);
-$routes->get('cantina/cardapio/', 'CantinaController::cardapio', ['filter' => 'authCantinaFilter']);
-$routes->get('cantina/cadastros/', 'CantinaController::cadastros', ['filter' => 'authCantinaFilter']);
-$routes->get('cantina/reservas/', 'CantinaController::reservas', ['filter' => 'authCantinaFilter']);
-$routes->get('cantina/pagamentos/', 'CantinaController::pagamentos', ['filter' => 'authCantinaFilter']);
+$routes->get('cantina/', 'CantinaController::index', ['filter' => 'authUserFilter']);
+$routes->get('cantina/cardapio/', 'CantinaController::cardapio', ['filter' => 'authUserFilter']);
+$routes->get('cantina/cadastros/', 'CantinaController::cadastros', ['filter' => 'authUserFilter']);
+$routes->get('cantina/reservas/', 'CantinaController::reservas', ['filter' => 'authUserFilter']);
+$routes->get('cantina/historico/', 'CantinaController::historico', ['filter' => 'authUserFilter']);
+$routes->get('cantina/pagamentos/', 'CantinaController::pagamentos', ['filter' => 'authUserFilter']);
 
+$routes->get('cae/', 'CaeController::index', ['filter' => 'authUserFilter']);
+$routes->get('cae/cadastros', 'CaeController::cadastros', ['filter' => 'authUserFilter']);
+$routes->get('cae/reservas', 'CaeController::reservas', ['filter' => 'authUserFilter']);
+$routes->get('cae/historico', 'CaeController::historico', ['filter' => 'authUserFilter']);
 
 $routes->get('sair/', 'AuthLogin::logout', ['filter' => 'authFilter']);
