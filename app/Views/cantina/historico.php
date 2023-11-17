@@ -21,10 +21,12 @@
         <p class="text1">Histórico de reservas</p>
         <div class="l"><img src="/img/linha.png" alt="yellow" class="linha"></div>
     </div>
-
-
 </header>
     <div class="gg">
+    <div class="filter-box">
+      <input type="date" name="date" id="date">
+      <button>Filtrar</button>
+    </div>
     <table>
         <tr>
           <th></th>

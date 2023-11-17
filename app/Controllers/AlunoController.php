@@ -51,8 +51,18 @@ class AlunoController extends BaseController
     public function historico()
     {
         $pedidoModel = new PedidoModel();
+        
+        $reservas = $pedidoModel->where('Usuario_id', session()->get('id'))->where('Pago', 1)->findAll();
+        foreach($reservas as $key => $reserva){
+            if($reserva['Data'] == date('Y-m-d')){
+                $arrayDataHoje = $reservas[$key];
+                unset($reservas[$key]);
+                array_unshift($reservas, $arrayDataHoje);
+                break;
+            }
+        }
+        $data['reservas'] = $reservas;
 
-        $data['reservas'] = $pedidoModel->where('Usuario_id', session()->get('id'))->where('Pago', 1)->findAll();
 
         return view('aluno/historico', $data);
     }

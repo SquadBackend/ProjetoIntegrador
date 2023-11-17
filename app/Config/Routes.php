@@ -10,6 +10,7 @@ use CodeIgniter\Router\RouteCollection;
 use App\Controllers\Pages;
 
 $routes->group("api", function ($routes) {
+    $routes->resource('cardapio', ['controller' => 'Api\cardapio', 'filter' => 'authApiFilter', 'websafe' => 1]);
     $routes->resource('usuarios', ['controller' => 'Api\usuarios', 'filter' => 'authApiFilter', 'websafe' => 1]);
     $routes->resource('pedidos', ['controller' => 'Api\pedidos', 'filter' => 'authApiFilter', 'websafe' => 1]);
     $routes->post('payAll/(:num)', 'Api\pedidos::payAll/$1', ['filter' => 'authApiFilter']);
@@ -32,7 +33,6 @@ $routes->get('cantina/cardapio/', 'CantinaController::cardapio', ['filter' => 'a
 $routes->get('cantina/cadastros/', 'CantinaController::cadastros', ['filter' => 'authUserFilter']);
 $routes->get('cantina/reservas/', 'CantinaController::reservas', ['filter' => 'authUserFilter']);
 $routes->get('cantina/historico/', 'CantinaController::historico', ['filter' => 'authUserFilter']);
-$routes->get('cantina/pagamentos/', 'CantinaController::pagamentos', ['filter' => 'authUserFilter']);
 
 $routes->get('cae/', 'CaeController::index', ['filter' => 'authUserFilter']);
 $routes->get('cae/cadastros', 'CaeController::cadastros', ['filter' => 'authUserFilter']);

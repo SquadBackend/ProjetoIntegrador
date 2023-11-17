@@ -14,6 +14,22 @@
     </div>
     <div class="main">
         <div id="back">
+            <dialog id="pagarDialog" class="MiniDialog">
+                <header>
+                    <p>Confirmação</p>
+                </header>
+                <article>   
+                    <p>Confirme os pedidos</p>
+                    <ul id="payList">
+                        
+                    </ul>
+                </article>
+                <footer>
+                    <button autofocus onclick="this.closest('dialog').close('cancel');document.querySelector('#back').style.display = 'none';">Cancelar</button>
+                    <button onclick="Pagar(event);">Confirmar</button>
+                </footer>
+            </dialog>
+
             <dialog id="alterarDialog" class="MegaDialog">
                 <header>
                     <p>Alterar o pedido</p>
@@ -69,7 +85,7 @@
         <div class="functions">
             <img class="qrcode" src="https://www.canalautismo.com.br/wp-content/uploads/2018/05/qrcode-RevistaAutismo.png" >
             <input type="hidden" name="userId" id="userId" value="<?= session()->get('id'); ?>">
-            <button onclick="Pagar(event);">Já paguei</button>
+            <button onclick="MostrarPagar(event);">Já paguei</button>
         </div>
         
 
@@ -85,7 +101,7 @@
         const TurnoElem = document.querySelector("#turno");
         const Back = document.querySelector('#back');
         const AlterarDialog = document.querySelector('#alterarDialog');
-
+        const PagarDialog = document.querySelector('#pagarDialog');
 
         function MostrarEditar(id){
             Back.style.display = 'block';
@@ -98,6 +114,34 @@
             reservaData = reservaData[2] + "-" + reservaData[1] + "-" + reservaData[0];
             DataElem.value = reservaData;
 
+        }
+        
+        var pedidos = null;
+
+        async function MostrarPagar(){
+            
+            document.querySelector("#payList").innerHTML = '<ul id="payList"></ul>';
+
+
+            const res = await axios.get("/api/pedidos");
+            if(res.status = 200){
+                console.log(res);
+                pedidos = res.data.filter((pedido) => {
+                    if(pedido.Pago == 0){
+                        return pedido;
+                    }
+                });
+                console.log(pedidos);
+                pedidos.forEach((e) => {
+                    const pedido_li = document.createElement("li");
+                    var data = e.Data.split("-");
+                    data = data[2] + "/" + data[1] + "/" + data[0];
+                    pedido_li.innerText = `${data} - ${e.Turno}`;
+                    document.querySelector("#payList").appendChild(pedido_li);
+                });
+            }
+            Back.style.display = 'block';
+            PagarDialog.showModal();
         }
 
         async function Deletar(id){

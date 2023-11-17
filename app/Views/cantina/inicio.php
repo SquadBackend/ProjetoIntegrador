@@ -30,10 +30,5 @@
     <div class="tt">
         <a href="<?php echo site_url('cantina/historico', METHOD); ?>" style="text-decoration: none;"><p>HISTÓRICO DE RESERVAS</p></a>
     </div>
-    <hr>
-    <div class="tt">
-        <a href="<?php echo site_url('cantina/pagamentos', METHOD); ?>" style="text-decoration: none;"><p>PAGAMENTO</p></a>
-    </div>
-    <hr>
 </body>
 </html>

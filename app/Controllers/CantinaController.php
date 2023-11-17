@@ -64,9 +64,5 @@ class CantinaController extends BaseController
 
         return view('cantina/historico', $data);
     }
-
-    public function pagamentos()
-    {
-        return view('cantina/pagamentos');
-    }
+    
 }

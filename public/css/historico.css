@@ -92,3 +92,126 @@ hr {
 }
 
 
+.food-description button {
+    margin: 10px 0px 0px 0px;
+    height: 30px;
+    width: 100%;
+    flex-grow: 1;
+    font-size: 16px;
+    background-color: #f3b001;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+
+.DialogInfo {
+    width: 100%;
+}
+
+.DialogMessage {
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 0px 10px;
+}
+
+.DialogMessage.sucesso{
+    background-color: #c1ffaf;
+}
+
+.DialogMessage.sucesso p{
+    color: #2f8200;
+}
+
+.DialogMessage.erro{
+    background-color: #ffd6d6;
+}
+
+.DialogMessage.erro p{
+    color: #ff2727;
+}
+
+#back {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000000a;
+}
+
+.MegaDialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 10px;
+    /* background-color: white; */
+    box-shadow: #00000026 -1px 2px 12px 5px;
+}
+
+.MegaDialog header {
+    font-size: 14px;
+    /* font-weight: 200; */
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #f3b001;
+}
+
+.MegaDialog header p {
+    font-size: 16px;
+}
+
+.MegaDialog article {
+    padding: 10px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.input-div {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+
+}
+
+
+.MegaDialog label {
+    font-size: 16px;
+}
+
+.MegaDialog input, .MegaDialog select{
+    background-color: #FAFAFA;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.MegaDialog footer{
+    gap: 10px;
+    display: flex;
+    padding: 0px 20px 20px 20px;
+    flex-wrap: wrap-reverse;
+}
+
+.MegaDialog button {
+    flex-grow: 1;
+    font-size: 16px;
+    /* width: 100px; */
+    background-color: #f3b001;
+    border-radius: 5px;
+    /* background: none; */
+    border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    outline: inherit;
+}
+
+

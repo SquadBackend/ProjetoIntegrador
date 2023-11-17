@@ -191,6 +191,66 @@ hr {
     background-color: #0000000a;
 }
 
+
+.MiniDialog{
+    position: fixed;
+    min-width: 320px;
+    width: 100%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: #00000026 -1px 2px 12px 5px;
+}
+
+.MiniDialog ul{
+    list-style-position: inside;
+}
+
+.MiniDialog li{
+    padding: 10px 0px;
+}
+
+.MiniDialog li::marker {
+    color: #ebaa03;
+}
+
+.MiniDialog header{
+    border-radius: 10px 10px 0px 0px;
+    background-color: #e9aa04;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.MiniDialog article{
+    padding: 10px;
+}
+
+.MiniDialog footer{
+    border-radius: 0px 0px 5px 5px;
+    gap: 10px;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+
+
+.MiniDialog button{
+    font-size: 14px;
+    /* width: 100px; */
+    background-color: #f3b001;
+    border-radius: 5px;
+    /* background: none; */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: inherit;
+}
+
 .MegaDialog{
     position: fixed;
     top: 50%;

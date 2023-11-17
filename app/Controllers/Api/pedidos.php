@@ -17,6 +17,8 @@ class pedidos extends ResourceController
         return $this->respond($this->model->findAll());
     }
 
+    
+
     public function show($id = null)
     {
         $data = $this->model->getWhere(['id' => $id])->getResult();
