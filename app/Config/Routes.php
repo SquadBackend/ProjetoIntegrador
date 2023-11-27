@@ -14,6 +14,7 @@ $routes->group("api", function ($routes) {
     $routes->resource('usuarios', ['controller' => 'Api\usuarios', 'filter' => 'authApiFilter', 'websafe' => 1]);
     $routes->resource('pedidos', ['controller' => 'Api\pedidos', 'filter' => 'authApiFilter', 'websafe' => 1]);
     $routes->post('payAll/(:num)', 'Api\pedidos::payAll/$1', ['filter' => 'authApiFilter']);
+    $routes->get('reservas', 'Api\pedidos::reservas', ['filter' => 'authApiFilter']);
 });
 
 $routes->get('/', 'AuthLogin::index', ['filter' => 'guestFilter']);

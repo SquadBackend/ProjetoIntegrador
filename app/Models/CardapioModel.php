@@ -10,6 +10,7 @@ class CardapioModel extends Model
 
     protected $allowedFields = [
         'id',
-        'Comida'
+        'Comida',
+        'Texto'
     ];
 }

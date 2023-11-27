@@ -38,7 +38,13 @@
                 </footer>
             </dialog>
         </div>
-
+        <div class="filter-box">
+            <form action="" method="get">
+                <input type="date" name="date" id="date" value="<?php if(isset($date)) {echo $date;} ?>" required>
+                <button>Filtrar</button>
+            </form>
+            <button onclick="window.location.replace('<?= site_url('aluno/historico', METHOD); ?>');">Limpar</button>
+        </div>
         <p class="main-title">O QUE VOCÊ PEDIU RECENTEMENTE</p>
 
         <div class="food-list">

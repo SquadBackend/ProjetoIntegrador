@@ -31,17 +31,21 @@ class cardapio extends ResourceController
     public function create()
     {
         $data = $this->request->getJSON();
-        if($this->model->insert($data)){
-            $response = [
-                'status'   => 201,
-                'error'    => null,
-                'messages' => [
-                    'success' => 'Dados salvos'
-                ]
-            ];
-            return $this->respondCreated($response);
+        if(!$this->model->where('Comida', $data->Comida)->findAll()){
+            if($this->model->insert($data)){
+                $response = [
+                    'status'   => 201,
+                    'error'    => null,
+                    'messages' => [
+                        'success' => 'Dados salvos'
+                    ]
+                ];
+                return $this->respondCreated($response);
+            }
+            return $this->fail($this->model->errors());
         }
-        return $this->fail($this->model->errors());
+        
+        return $this->failResourceExists('Esse ingrediente já foi adicionado.');
         
 
     }
@@ -50,19 +54,21 @@ class cardapio extends ResourceController
     {
         $data = $this->request->getJSON();
 
-        
-        if($this->model->update($id, $data)){
-            $response = [
-                'status'   => 200,
-                'error'    => null,
-                'messages' => [
-                    'success' => 'Dados atualizados'
-                    ]
-            ];
-            return $this->respond($response);
-        };
-
-        return $this->fail($this->model->errors());
+        if(!$this->model->where('Comida', $data->Comida)->findAll()){
+            if($this->model->update($id, $data)){
+                $response = [
+                    'status'   => 200,
+                    'error'    => null,
+                    'messages' => [
+                        'success' => 'Dados atualizados'
+                        ]
+                ];
+                return $this->respond($response);
+            };
+    
+            return $this->fail($this->model->errors());
+        }
+        return $this->failResourceExists('Esse ingrediente já foi adicionado.');
         
     }
 

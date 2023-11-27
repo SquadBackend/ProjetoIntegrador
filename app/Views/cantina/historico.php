@@ -24,8 +24,11 @@
 </header>
     <div class="gg">
     <div class="filter-box">
-      <input type="date" name="date" id="date">
-      <button>Filtrar</button>
+      <form action="" method="get">
+        <input type="date" name="date" id="date" value="<?php if(isset($date)) {echo $date;} ?>" required>
+        <button>Filtrar</button>
+      </form>
+      <button onclick="window.location.replace('<?= site_url('cantina/historico', METHOD); ?>');">Limpar</button>
     </div>
     <table>
         <tr>

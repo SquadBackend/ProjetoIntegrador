@@ -17,7 +17,10 @@ class pedidos extends ResourceController
         return $this->respond($this->model->findAll());
     }
 
-    
+    public function reservas()
+    {
+        return $this->respond($this->model->where("Pago", 1)->findAll());
+    }
 
     public function show($id = null)
     {

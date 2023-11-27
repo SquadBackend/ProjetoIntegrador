@@ -22,8 +22,8 @@
     <main>
       <?php foreach($comidas as $comida) : ?>
           <div class="alimento" style="padding-right: calc(100% / 2 - 500px);">
-              <img class="comida-img" src="/img/-.jpeg" alt="foto da comida" />
-              <h2><?php echo $comida['Comida']; ?></h2>
+              <img class="comida-img" src="/img/<?= $comida['Comida']; ?>.jpeg" alt="foto da comida" />
+              <h2><?php echo $comida['Texto']; ?></h2>
           </div>
       <?php endforeach ?>
     </main>

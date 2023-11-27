@@ -50,9 +50,34 @@ class AlunoController extends BaseController
 
     public function historico()
     {
-        $pedidoModel = new PedidoModel();
+        #$pedidoModel = new PedidoModel();
         
-        $reservas = $pedidoModel->where('Usuario_id', session()->get('id'))->where('Pago', 1)->findAll();
+        #$reservas = $pedidoModel->where('Usuario_id', session()->get('id'))->where('Pago', 1)->findAll();
+        $db = \Config\Database::connect();
+        $builder = $db->table('Pedido');
+        $builder->select('*');
+        $builder->where('Pago', 1);
+        $builder->where("Usuario_id", session()->get("id"));
+
+        $dataAtual = time();
+        $dataUmaSemanaAtrás = $dataAtual - (7 * 24 * 60 * 60);
+        //$dataUmaSemanaAtrás = date('Y-m-d 00:00:00', $dataUmaSemanaAtrás);
+        $dataUmaSemanaAtrás = date('Y-m-d', $dataUmaSemanaAtrás);
+        
+        if($this->request->getGet("date")){
+            //dataFiltroStart = date('Y-m-d 00:00:00', strtotime($this->request->getGet("date")));
+            //$dataFiltroEnd = date('Y-m-d 23:59:59', strtotime($this->request->getGet("date")));
+            //$builder->where('Criado_em >=', $dataFiltroStart);
+            //$builder->where('Criado_em <=', $dataFiltroEnd);
+            $builder->where('Data', $this->request->getGet("date"));
+        }else{
+            //$builder->where('Criado_em >= ', $dataUmaSemanaAtrás);
+            $builder->where('Data >=', $dataUmaSemanaAtrás);
+        }
+
+        $query = $builder->get();
+        $reservas = $query->getResultArray();
+                
         foreach($reservas as $key => $reserva){
             if($reserva['Data'] == date('Y-m-d')){
                 $arrayDataHoje = $reservas[$key];

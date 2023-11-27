@@ -215,3 +215,37 @@ hr {
 }
 
 
+.filter-box{
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-box form{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-box button {
+    font-size: 16px;
+    width: 100px;
+    background-color: #f3b001;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    height: 35px;
+}
+
+
+input, select{
+    background-color: #FAFAFA;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+

@@ -94,7 +94,7 @@
                 if(res.status == 200){
                     console.log("Confirmado com sucesso!");
                     document.querySelector("#info").innerHTML = '<div class="info" id="info"></div>';
-                    document.querySelector("#functions-" + id).innerHTML = '<a class="button" id="verify-button" onclick="Deletar(' + id + ');">Deletar</a>';
+                    document.querySelector("#functions-" + id).innerHTML = '<a class="button" id="block-button" onclick="MostrarBloquear(' + id + ');">Bloquear</a> <a class="button" id="verify-button" onclick="Deletar(' + id + ');">Deletar</a>';
                 }else{
                     console.log("Ocorreu um erro!");
                     document.querySelector("#info").innerHTML = '<div class="info" id="info"><div class="message erro"><p>Ocorreu um erro ao confirmar o usuário.</p></div></div>';

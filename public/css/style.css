@@ -98,7 +98,7 @@ header {
 }
 
 .comida-img {
-    margin: 20px;
+    height: calc(100% - 40px);
     border-radius: 20px;
     width: 100px;
 }
@@ -173,7 +173,7 @@ main {
 }
 
 #back {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
